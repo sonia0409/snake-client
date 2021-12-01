@@ -12,7 +12,11 @@ const connect = function () {
   conn.on("connect", () => {
     // code that does something when the connection is first established
     console.log(`Successfully connected to game server`)
-    conn.write("Name: SS")
+    conn.write("Name: SS");
+    /* setInterval(() => conn.write("Move: up"),1000)
+    setInterval(() => conn.write("Move: right"),3000)
+    setInterval(() =>  conn.write("Move: up"),5000)
+    setInterval(() =>  conn.write("Move: left"),8000)  */ 
   });
   conn.on("data", (data) => {
     // code prints out the data, obtined from server when the connection is first established
